@@ -89,7 +89,6 @@ class Host(models.Model):
                 self.env['runbot.runbot'].warning(message)
                 _logger.warning(message)
 
-
     def _get_work_path(self):
         return os.path.abspath(os.path.join(os.path.dirname(__file__), '../static'))
 
