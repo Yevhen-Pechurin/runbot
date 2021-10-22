@@ -265,6 +265,7 @@ class Runbot(models.AbstractModel):
 
         host.last_end_loop = fields.Datetime.now()
 
+
     def sleep(self, t):
         time.sleep(t)
 
