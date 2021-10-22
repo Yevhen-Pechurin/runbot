@@ -147,6 +147,7 @@ class Batch(models.Model):
             self.bundle_id.version_id.filtered_domain(t.get_version_domain())
         )
 
+
         pushed_repo = self.commit_link_ids.mapped('commit_id.repo_id')
         dependency_repos = triggers.mapped('dependency_ids')
         all_repos = triggers.mapped('repo_ids') | dependency_repos
