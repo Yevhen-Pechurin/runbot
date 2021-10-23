@@ -30,7 +30,6 @@ class Hook(http.Controller):
 
         remote = request.env['runbot.remote'].sudo().browse([remote_id])
 
-
         # force update of dependencies too in case a hook is lost
         if not payload or event == 'push':
             remote.repo_id.set_hook_time(time.time())
