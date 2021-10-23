@@ -76,7 +76,6 @@ class Runbot(models.AbstractModel):
 
                 _logger.info('Builds %s where allocated to runbot', allocated)
 
-
     def _get_builds_to_init(self, host):
         domain_host = self.build_domain_host(host)
         used_slots = self.env['runbot.build'].search_count(domain_host + [('local_state', '=', 'testing')])
