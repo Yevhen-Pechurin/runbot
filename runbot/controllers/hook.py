@@ -10,6 +10,7 @@ from odoo.http import request
 _logger = logging.getLogger(__name__)
 
 
+
 class Hook(http.Controller):
 
     @http.route(['/runbot/hook/<int:remote_id>'], type='http', auth="public", website=True, csrf=False)
