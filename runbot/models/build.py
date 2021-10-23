@@ -914,7 +914,6 @@ class BuildResult(models.Model):
         _logger.error('None of %s found in commit, actual commit content:\n %s' % (commit.repo_id.server_files, os.listdir(commit._source_path())))
         raise RunbotException('No server found in %s' % commit.dname)
 
-
     def _cmd(self, python_params=None, py_version=None, local_only=True, sub_command=None):
         """Return a list describing the command to start the build
         """
