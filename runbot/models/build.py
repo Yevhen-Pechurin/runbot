@@ -587,7 +587,6 @@ class BuildResult(models.Model):
                 continue
             build._run_job()
 
-
     def _process_requested_actions(self):
         for build in self:
             if build.requested_action == 'deathrow':
