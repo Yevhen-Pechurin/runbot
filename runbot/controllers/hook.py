@@ -47,3 +47,4 @@ class Hook(http.Controller):
                 branch = request.env['runbot.branch'].sudo().search([('remote_id', '=', remote.id), ('name', '=', branch_ref)])
                 branch.alive = False
         return ""
+
