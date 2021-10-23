@@ -84,7 +84,6 @@ class Runbot(models.AbstractModel):
             return self.env['runbot.build']
         return self.env['runbot.build'].search(domain_host + [('local_state', '=', 'pending')], limit=available_slots)
 
-
     def _gc_running(self, host):
         running_max = host.get_running_max()
         domain_host = self.build_domain_host(host)
